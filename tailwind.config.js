@@ -6,10 +6,17 @@ export default {
       screens: {
         'xs': {'max': '768px'}
       },
+      backgroundImage: theme => ({
+        'banner': "url('./src/assets/img/imagenBanner')"
+      }),
+      backgroundPosition: {
+        'banner-position': "-200px -200px"
+      },
       animation: {
         "spin-low": "spin 2s linear infinite",
         "from-bellow": "fromBellow 500s linear",
         "from-right": "fromRight 300s linear",
+        "bg-banner": 'backBanner 10s linear',
       },
       keyframes: {
         fromBellow: {
@@ -21,6 +28,10 @@ export default {
           "0%": { transform: "translateX(200%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        backBanner: {
+          '0%': {'background-position': '0px 0px'},
+          '100%': {'background-position': '-200px -200px'},
+        }
       },
     },
   },
